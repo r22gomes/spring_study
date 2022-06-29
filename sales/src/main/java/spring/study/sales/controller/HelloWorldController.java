@@ -20,6 +20,6 @@ public class HelloWorldController {
 
     @GetMapping("/")
     public String helloWorld() {
-        return applicationName + " " + messageApp;
+        return "<h1>" + applicationName + " " + messageApp + "</h1>";
     }
 }

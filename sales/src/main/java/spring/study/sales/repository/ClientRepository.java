@@ -1,8 +1,12 @@
 package spring.study.sales.repository;
 
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import spring.study.sales.domain.Client;
 
-@Repository
-public class ClientRepository {
+import java.util.Optional;
+
+
+public interface ClientRepository extends JpaRepository<Client, Long> {
+
 
 }

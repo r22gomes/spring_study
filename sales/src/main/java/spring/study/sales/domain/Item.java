@@ -2,22 +2,25 @@ package spring.study.sales.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+
 import javax.persistence.*;
 
 @Data
 @AllArgsConstructor
 @Entity
-@Table(name = "client")
-public class Client {
+public class Item {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private final Long clientId;
+    private final Long itemId;
 
-    private final String name;
+    @OneToMany
+    private final Order order;
 
-    @Column(unique = true, updatable = false)
-    private final String username;
+    @OneToMany
+    private final Product product;
+
+    private final int quantity;
 
 
 }
